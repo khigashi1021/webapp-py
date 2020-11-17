@@ -9,10 +9,10 @@ r = redis.StrictRedis(host=myHostname, port=6380,
 result = r.ping()
 print("Ping returned : " + str(result))
 
-result = r.set("Message", "Hello!, The cache is working with Python!")
+result = r.set("Message2", "Hello!, The cache is working with Python!")
 print("SET Message returned : " + str(result))
 
-result = r.get("Message")
+result = r.get("Message2")
 print("GET Message returned : " + result.decode("utf-8"))
 
 result = r.client_list()
